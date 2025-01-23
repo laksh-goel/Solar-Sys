@@ -9,7 +9,12 @@ const Footer = () => {
     >
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start">
         <div className="w-full md:w-1/3 mb-8 md:mb-0">
-          <img src={assets.logo_dark} alt="" />
+          <img 
+                 src={assets.logo}
+                 alt="Logo"
+                 className="w-32 h-auto invert brightness-0" // Example: Tailwind for width (adjust "w-32" as needed)
+                 // style={{ width: "120px", height: "auto" }} // Alternatively, use inline styles
+               />
           <p className="text-gray-400 mt-4">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
             itaque esse molestiae numquam consectetur inventore expedita est,
