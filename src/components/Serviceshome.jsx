@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { assets, servicesData } from "../assets/assets";
 import { use } from "react";
+import { motion } from "framer-motion";
 
 const Serviceshome = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsToShow, setCardsToShow] = useState(1);
 
-  useEffect(()=>{
-    const updateCardsToShow = ()=>{
-      if(window.innerWidth>=1024){
+  useEffect(() => {
+    const updateCardsToShow = () => {
+      if (window.innerWidth >= 1024) {
         setCardsToShow(servicesData.length);
-      }else{
+      } else {
         setCardsToShow(1);
       }
     };
     updateCardsToShow();
 
-      window.addEventListener('resize' , updateCardsToShow);
-      return ()=> window.removeEventListener('resize', updateCardsToShow);
-    
-  },[])
+    window.addEventListener("resize", updateCardsToShow);
+    return () => window.removeEventListener("resize", updateCardsToShow);
+  }, []);
 
   const nextService = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % servicesData.length);
@@ -31,7 +31,11 @@ const Serviceshome = () => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -200 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       className="container mx-auto py-4 pt-20 px-6 md:px-20 lg:px-32 my-20 w-full overflow-hidden"
       id="Services"
     >
@@ -90,7 +94,7 @@ const Serviceshome = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

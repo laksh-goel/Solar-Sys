@@ -14,6 +14,7 @@ import About_us from './About_us.jpg'
 import left_arrow from './left_arrow.svg'
 import right_arrow from './right_arrow.svg'
 import star_icon from './star_icon.svg'
+import logo_dark from './logo_dark.svg'
 
 
 
@@ -34,6 +35,7 @@ export const assets = {
     left_arrow,
     right_arrow,
     star_icon,
+    logo_dark,
 
 
    
@@ -86,7 +88,7 @@ export const testimonialsData = [
       image: profile_img_1,
       alt: "Portrait of Donald Jackman",
       rating: 5,
-      text: "We had an excellent experience with Solar Sys. Their team was professional, thorough and timely. They walked us through the entire process and helped us to gain a good understanding of the system. Their installation team were quick, thorough and clean. I highly recommend them to anyone considering solar."
+      text: "We had an excellent experience with Solar Sys. Their team was professional, thorough and timely. Their installation team were quick, thorough and clean. I highly recommend them to anyone considering solar."
   },
   {
       name: "Richard Nelson",
