@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,17 +10,16 @@ const Footer = () => {
     >
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start">
         <div className="w-full md:w-1/3 mb-8 md:mb-0">
-          <img 
-                 src={assets.logo}
-                 alt="Logo"
-                 className="w-32 h-auto invert brightness-0" // Example: Tailwind for width (adjust "w-32" as needed)
-                 // style={{ width: "120px", height: "auto" }} // Alternatively, use inline styles
-               />
+        
+        <Link to="/">
+                  <img
+                    src={assets.logo}
+                    alt="Logo"
+                    className="w-32 h-auto md:w-40 lg:w-48" // Adjust the width according to screen size
+                  />
+                </Link>
           <p className="text-gray-400 mt-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
-            itaque esse molestiae numquam consectetur inventore expedita est,
-            eos et? Facere, non nihil quas nemo ipsa voluptas voluptate. Esse,
-            atque ipsa?
+            The GREEN in you is Us.
           </p>
         </div>
         <div className="w-full md:w-1/5 mb-8 md:mb-0">
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-gray-700 py-4 mt-10 text-center text-gray-500">
-      Copyright 2024 © GreatStack. All Right Reserved.
+        Copyright 2024 © SolarXsys. All Right Reserved.
       </div>
     </div>
   );

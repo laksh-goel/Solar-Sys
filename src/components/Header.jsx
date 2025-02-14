@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+
 import { motion } from "framer-motion";
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
       style={{ backgroundImage: "url('/Header_image.jpg')" }}
       id="Header"
     >
-      <Navbar />
+  
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1.5 }}
