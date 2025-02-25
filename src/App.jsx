@@ -12,9 +12,10 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Careers from "./components/Careers";
 import Projects from "./components/Projects";
-import Consultaion from "./components/Consultaion";
+import Consultation from "./components/Consultation";
 import About from "./components/About";
 import Whychooseus from "./components/Whychooseus";
+import SolarCalculator from "./components/SolarCalculator";
 
 const App = () => {
   return (
@@ -29,9 +30,10 @@ const App = () => {
           <Route path="/Services" element={<Serviceshome />} />
           <Route path="/Careers" element={<Careers />} />
           <Route path="/Projects" element={<Projects />} />
-          <Route path="/Consultation" element={<Consultaion/>} />
+          <Route path="/Consultation" element={<Consultation/>} />
           <Route path="/about" element={<About />} />
           <Route path="/Whychooseus" element={<Whychooseus />} />
+          <Route path="/SolarCalculator" element={<SolarCalculator />} />
 
          
 

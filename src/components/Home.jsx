@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Careers from "./Careers";
 import Projects from "./Projects";
-import Consultaion from "./Consultaion";
+
 import WhychooseusHome from "./WhychooseusHome";
 
 function Home() {
@@ -19,13 +19,11 @@ function Home() {
       <Header />
       <AboutHome />
       <Serviceshome />
-      <WhychooseusHome/>
+      <WhychooseusHome />
       <Testimonials />
       <Contact />
       <Projects />
       <Careers />
-      <Consultaion />
-     
     </div>
   );
 }

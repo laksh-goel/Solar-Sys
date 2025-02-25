@@ -1,106 +1,121 @@
-// import React from 'react';
-
-
-// const Whychooseus = () => {
-//   const steps = [
-//     "Free consultation visit",
-//     "Assigning Personal Manager",
-//     "Site Survey",
-//     "3D designing",
-//     "Paper work",
-//     "Installation",
-//     "Subsidy Application",
-//     "Net metering",
-//     "Connecting to grid",
-//     "Powered home with solar generation",
-//     "Operation and maintenance"
-//   ];
-
-//   return (
-//     <section className="bg-green-50 py-12">
-//       <div className="container mx-auto px-6 text-center">
-//         <h1 className="text-3xl sm:text-5xl font-bold text-green-600 mb-4">
-//           Your Solar, Our Duty
-//         </h1>
-//         <p className="text-lg sm:text-2xl text-gray-700 mb-10">
-//           Making your Solar journey smooth and worry-free with:
-//         </p>
-
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//           {steps.map((step, index) => (
-//             <div
-//               key={index}
-//               className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
-//             >
-//               <div className="w-12 h-12 mx-auto mb-4 bg-green-500 text-white flex items-center justify-center rounded-full text-xl font-bold">
-//                 {index + 1}
-//               </div>
-//               <p className="text-gray-800 font-medium">{step}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Whychooseus;
-
-import React from 'react';
-import { motion } from 'framer-motion';
+import React,{ useState } from "react";
+import { motion } from "framer-motion";
+import {
+  CheckCircle,
+  UserCheck,
+  MapPin,
+  Box,
+  FileText,
+  Wrench,
+  Banknote,
+  Bolt,
+  PlugZap,
+  Home,
+  Settings,
+} from "lucide-react";
 
 const steps = [
-  'Free consultation visit',
-  'Assigning Personal Manager',
-  'Site Survey',
-  '3D designing',
-  'Paper work',
-  'Installation',
-  'Subsidy Application',
-  'Net metering',
-  'Connecting to grid',
-  'Powered home with solar generation',
-  'Operation and maintenance'
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-    },
+  {
+    name: "Free consultation visit",
+    description:
+      "A consultant will visit your home, answer your questions, and generate a digital design.",
+    icon: <UserCheck size={20} />,
   },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+  {
+    name: "Assigning Personal Manager",
+    description: "A dedicated manager is assigned to assist you.",
+    icon: <UserCheck size={20} />,
+  },
+  {
+    name: "Site Survey",
+    description: "Surveying your site to assess feasibility and best setup.",
+    icon: <MapPin size={20} />,
+  },
+  {
+    name: "3D designing",
+    description: "Creating a 3D model of your solar installation.",
+    icon: <Box size={20} />,
+  },
+  {
+    name: "Paper work",
+    description: "End-to-end paperwork management and approvals.",
+    icon: <FileText size={20} />,
+  },
+  {
+    name: "Installation",
+    description: "Professional and safe installation of solar panels.",
+    icon: <Wrench size={20} />,
+  },
+  {
+    name: "Subsidy Application",
+    description: "Assisting with government subsidy applications.",
+    icon: <Banknote size={20} />,
+  },
+  {
+    name: "Net metering",
+    description: "Setting up net metering for energy tracking.",
+    icon: <Bolt size={20} />,
+  },
+  {
+    name: "Connecting to grid",
+    description: "Connecting your system to the main power grid.",
+    icon: <PlugZap size={20} />,
+  },
+  {
+    name: "Powered home with solar generation",
+    description: "Your home starts generating clean solar energy.",
+    icon: <Home size={20} />,
+  },
+  {
+    name: "Operation and maintenance",
+    description: "Ongoing support and maintenance services.",
+    icon: <Settings size={20} />,
+  },
+];
 
 export default function Whychooseus() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
-      <h1 className="text-4xl font-bold text-green-600 mb-4">Your Solar, Our Duty</h1>
-      <h2 className="text-xl text-gray-700 mb-8 text-center">
-        Making your Solar journey smooth and worry-free with:
-      </h2>
-      <motion.ul
-        className="space-y-4 max-w-md w-full"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {steps.map((step, index) => (
-          <motion.li
-            key={index}
-            variants={itemVariants}
-            className="bg-white p-4 rounded-2xl shadow-md text-gray-800 text-center text-lg"
-          >
-            {step}
-          </motion.li>
-        ))}
-      </motion.ul>
+    <div className="flex justify-center p-6 min-h-screen text-white bg-gray-100">
+      <div className="max-w-3xl w-full">
+        <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
+          {" "}
+          Your Solar, Our Duty
+        </h2>
+        <p className="text-lg text-center mb-8 text-gray-700">
+          {" "}
+          Making your Solar journey smooth and worry free with
+        </p>
+
+        <div className="relative border-l-4 border-green-500 pl-6 space-y-8 bg-blue-900 p-6 rounded-lg">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              whileHover={{ scale: 1.05 }}
+              className="flex items-start space-x-4"
+            >
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="relative"
+              >
+                <div className="absolute left-[-42px] top-2 w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-blue-900">
+                  {step.icon}
+                </div>
+              </motion.div>
+              <div>
+                <h3 className="text-xl font-semibold text-white">
+                  {step.name}
+                </h3>
+                <p className="text-sm text-gray-300">{step.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

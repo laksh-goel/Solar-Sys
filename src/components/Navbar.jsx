@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaCalculator } from "react-icons/fa";
 
 const Navbar = () => {
   const location = useLocation();
@@ -19,24 +21,24 @@ const Navbar = () => {
   }, [showMobileMenu]);
 
   return (
-   
     <nav
-  className={`${
-    location.pathname === "/" ? "fixed  bg-gray-900" : "relative bg-gray-900"
-
-  } top-0 left-0 w-full z-10  shadow-md`}
->
+      className={`${
+        location.pathname === "/"
+          ? "fixed  bg-gray-900"
+          : "relative bg-gray-900"
+      } top-0 left-0 w-full z-10  shadow-md`}
+    >
       <div className="conatiner mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
-        <div  onClick={() => console.log("Clicked!")}>
-      <Link to="/">
-          <img
-            src={assets.logo}
-            alt="Logo"
-            className="w-32 h-auto md:w-40 lg:w-48  z-10" // Adjust the width according to screen size
-          />
-        </Link>
+        <div onClick={() => console.log("Clicked!")}>
+          <Link to="/">
+            <img
+              src={assets.logo}
+              alt="Logo"
+              className="w-32 h-auto md:w-40 lg:w-48  z-10" // Adjust the width according to screen size
+            />
+          </Link>
         </div>
-        
+
         <ul className="hidden md:flex gap-7 text-white">
           <Link to="/" className="cursor-pointer hover:text-gray-400">
             Home
@@ -61,9 +63,27 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        <button className="hidden md:block bg-white px-8 py-2 rounded-full">
-          Book a free Consulation
-        </button>
+        <div className="hidden md:flex items-center gap-4">
+          <button className="hidden md:block bg-white px-8 py-2 rounded-full">
+            <Link
+              to="/Consultation"
+              className="cursor-pointer hover:text-gray-400"
+            >
+              Book a free Consulation
+            </Link>
+          </button>
+          <Link to="/SolarCalculator">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex items-center justify-center gap-2 px-6 py-2  bg-white  hover:text-gray-400 font-bold rounded-full shadow-lg transition-all duration-300 cursor-pointer"
+          >
+            <FaCalculator size={20} />
+           
+          </motion.div>
+          </Link>
+    
+        </div>
 
         <img
           onClick={() => setshowMobileMenu(true)}
@@ -131,8 +151,8 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        <div className="flex items-center justify-center mt-5">
-          <button className="block md:hidden bg-green-500 px-8 py-2 rounded-full ">
+        <div className="flex items-center justify-center mt-5 gap-4 ">
+          <button className="block md:hidden bg-green-500 px-8 py-2 rounded-full text-white ">
             <Link
               onClick={() => setshowMobileMenu(false)}
               to="/Consultation"
@@ -141,6 +161,16 @@ const Navbar = () => {
               Book a free consultation
             </Link>
           </button>
+          <Link onClick={() => setshowMobileMenu(false)} to="/SolarCalculator">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex items-center justify-center gap-2 px-6 py-2 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 cursor-pointer"
+          >
+            <FaCalculator size={20} />
+           
+          </motion.div>
+</Link>
         </div>
       </div>
     </nav>

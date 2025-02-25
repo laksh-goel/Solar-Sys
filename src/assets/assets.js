@@ -22,6 +22,7 @@ import project_4 from "./project_4.jpg";
 
 
 
+
 export const assets = {
   logo,
   service1,
