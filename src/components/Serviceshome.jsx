@@ -59,6 +59,15 @@ export default function ServicesSection() {
   ];
 
   return (
+    <motion.div
+    initial={{opacity:0 , x: -200}}
+    transition={{duration:1}}
+    whileInView={{opacity:1, x:0}}
+    viewport={{once:true}}
+
+      className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden "
+      id="Contact"
+    >
     <section className="py-12">
       <div className="max-w-4xl mx-auto text-center px-4 " id="Services">
         <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
@@ -119,5 +128,6 @@ export default function ServicesSection() {
         </Swiper>
       </div>
     </section>
+    </motion.div>
   );
 }
