@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Careers from "./Careers";
 import Projects from "./Projects";
+import Metrics from "./Metrics";
 
 import WhychooseusHome from "./WhychooseusHome";
 
@@ -17,6 +18,7 @@ function Home() {
     <div className="Home">
       <ToastContainer />
       <Header />
+      <Metrics />
       <AboutHome />
       <Serviceshome />
       <WhychooseusHome />
