@@ -28,6 +28,8 @@ const Header = () => {
             Contact us
           </a>
         </div>
+        
+
       </motion.div>
     </div>
   );

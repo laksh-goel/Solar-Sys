@@ -15,10 +15,16 @@ import left_arrow from "./left_arrow.svg";
 import right_arrow from "./right_arrow.svg";
 import star_icon from "./star_icon.svg";
 import logo_dark from "./logo_dark.svg";
-import project_1 from "./project_1.jpg";
-import project_2 from "./project_2.jpg";
-import project_3 from "./project_3.jpg";
-import project_4 from "./project_4.jpg";
+import project_1 from "./project_1.jpeg";
+import project_2 from "./project_2.jpeg";
+import project_3 from "./project_3.jpeg";
+import project_4 from "./project_4.jpeg";
+import project_5 from "./project_5.jpeg";
+import project_6 from "./project_6.jpeg";
+import project_7 from "./project_7.jpg";
+import project_8 from "./project_8.jpg";
+import project_9 from "./project_9.jpg";
+import project_10 from "./project_10.jpg";
 
 
 
@@ -45,6 +51,12 @@ export const assets = {
   project_2,
   project_3,
   project_4,
+  project_5,
+  project_6,
+  project_7,
+  project_8,
+  project_9,
+  project_10,
 };
 
 export const testimonialsData = [

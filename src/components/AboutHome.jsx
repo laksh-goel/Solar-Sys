@@ -9,7 +9,7 @@ const AboutHome = () => {
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      className="flex flex-col items-center justify-center container my-16 mx-auto p-8 md:px-20 lg:px-32 w-full overflow:hidden "
+      className="flex flex-col items-center justify-center container my-14 mx-auto p-8 md:px-20 lg:px-32 w-full overflow:hidden "
       id="AboutHome"
     >
       <h1 className="text-2xl sm:text-4xl font-bold mb-2 ">
