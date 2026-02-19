@@ -28,21 +28,28 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-6 md:px-12 lg:px-20 gap-4">
         {/* Logo */}
-        <div className="flex-shrink-0">
-          <Link to="/">
-            <img
-              src={assets.logo}
-              alt="Logo"
-              className="w-36 h-auto md:w-44 lg:w-52"
-            />
-          </Link>
-        </div>
+        <Link
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex-shrink-0"
+        >
+          <img
+            src={assets.logo}
+            alt="SolarXsys Logo"
+            className="w-36 h-auto md:w-44 lg:w-52 cursor-pointer"
+          />
+        </Link>
 
         {/* Desktop Nav Links */}
         <ul className="hidden lg:flex items-center gap-6 text-white text-base font-semibold whitespace-nowrap">
-          <Link to="/" className="hover:text-green-400 transition">
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="hover:text-green-400 transition"
+          >
             Home
           </Link>
+
           <Link to="/about" className="hover:text-green-400 transition">
             Who are we
           </Link>
@@ -148,12 +155,16 @@ const Navbar = () => {
 
         <ul className="flex flex-col items-center gap-5 mt-4 text-lg font-medium text-gray-800">
           <Link
-            onClick={() => setshowMobileMenu(false)}
             to="/"
+            onClick={() => {
+              setshowMobileMenu(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             className="hover:text-green-600"
           >
             Home
           </Link>
+
           <Link
             onClick={() => setshowMobileMenu(false)}
             to="/about"
