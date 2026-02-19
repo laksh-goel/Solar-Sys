@@ -14,29 +14,31 @@ export default function Metrics() {
 
         {/* Projects Delivered */}
         <div>
-          <h2 className="text-5xl sm:text-6xl font-bold text-green-500 mb-2.5">
-            705
-          </h2>
-         <p className="text-1xl sm:text-2xl font-bold ">
+         
+         <h2 className="text-1xl sm:text-2xl font-bold mb-2 ">
         Projects{" "}
         <span className="underline underline-offset-4 decoration-1 under font-light">
           Delivered{" "}
         </span>
-      </p>
+      </h2>
+
+      <p className ="text-5xl sm:text-6xl font-bold text-green-500 mb-2.5">
+            705
+          </p>
   
         </div>
 
         {/* Power Delivered */}
         <div>
-          <h2 className="text-5xl sm:text-6xl font-bold text-green-500 mb-2.5">
-            2MW<span className="text-2xl align-top">*</span>
-          </h2>
-          <p className="text-1xl sm:text-2xl font-bold ">
+          <h2 className="text-1xl sm:text-2xl font-bold mb-2">
         Power{" "}
         <span className="underline underline-offset-4 decoration-1 under font-light">
           Delivered{" "}
         </span>
-      </p>
+      </h2>
+       <p className="text-5xl sm:text-6xl font-bold text-green-500">
+            3MW<span className="text-2xl align-top">*</span>
+          </p>
         </div>
 
       </div>

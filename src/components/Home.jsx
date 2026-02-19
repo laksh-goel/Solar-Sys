@@ -19,12 +19,13 @@ function Home() {
       <ToastContainer />
       <Header />
       <Metrics />
+       <Projects />
       <AboutHome />
       <Serviceshome />
       <WhychooseusHome />
       <Testimonials />
       <Contact />
-      <Projects />
+     
       <Careers />
     </div>
   );

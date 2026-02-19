@@ -66,7 +66,7 @@ export const testimonialsData = [
     image: profile_img_1,
     alt: "Portrait of Manvi Goel",
     rating: 5,
-    text: "We had an excellent experience with Solar Sys. Their team was professional, thorough and timely. Their installation team were quick, thorough and clean. I highly recommend them to anyone considering solar.",
+    text: "We had an excellent experience with Solar Xsys. Their team was professional, thorough and timely. Their installation team were quick, thorough and clean. I highly recommend them to anyone considering solar.",
   },
   {
     name: "Girish Kumar",
@@ -74,7 +74,7 @@ export const testimonialsData = [
     image: profile_img_2,
     alt: "Portrait of Girish Kumar",
     rating: 4,
-    text: "They listened to our needs, gave good advice and did a good and timely installation. In the first month our hungry squirrels nibbled away our connection.Solar Sys came back and fixed it, though not covered by their warranty. Great business!",
+    text: "They listened to our needs, gave good advice and did a good and timely installation. In the first month our hungry squirrels nibbled away our connection. Solar Xsys came back and fixed it, though not covered by their warranty. Great business!",
   },
   {
     name: "Raghav Sharma",
